@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>À propos</title>
+  </head>
+  <body>
+    <h1>À propos</h1>
+    <p><strong>Nom :</strong> Issam Lastab</p>
+
+    <h2>Retour sur le projet</h2>
+
+    <h3>Difficultés rencontrées</h3>
+    <p>
+      <strong>1. Comprendre le parsing des opérations :</strong>
+      J'ai eu du mal à comprendre comment parser une opération mathématique
+      saisie sous forme de texte (comme "2+3"). Je ne savais pas comment
+      extraire les nombres et l'opérateur de la chaîne de caractères. J'ai
+      effectué plusieurs git commit que j'ai dû annuler car ça ne fonctionnait
+      pas quand je testais le code. Ça m'a fait perdre pas mal de temps, mais je
+      pense qu'avec du temps en plus j'aurai pu trouver la solution.
+    </p>
+    <p>
+      <strong>2. Gestion des erreurs dans les formulaires :</strong>
+      J'ai eu des difficultés à gérer les erreurs lorsque l'utilisateur saisit
+      des valeurs incorrectes dans les formulaires. Par exemple, si
+      l'utilisateur saisit des lettres au lieu de nombres, mon code plantait.
+      J'ai appris qu'il fallait ajouter des vérifications pour s'assurer que les
+      entrées sont valides avant de les utiliser.
+    </p>
+    <p>
+      <strong>3. Utilisation de Git :</strong>
+      Au début, j'ai eu du mal à comprendre comment utiliser Git correctement.
+      J'ai parfois ajouté des fichiers que je ne voulais pas commiter, et j'ai
+      dû apprendre à utiliser `git reset` et `git restore` pour annuler mes
+      erreurs. Maintenant, je comprends mieux comment versionner mon code et
+      pourquoi c'est important.
+    </p>
+
+    <h3>Aspects qui ont été plus faciles ou intéressants</h3>
+    <p>
+      <strong>1. Création des routes Flask :</strong>
+      J'ai trouvé assez simple de créer des routes avec Flask et de les associer
+      à des fonctions. La syntaxe "@app.route" est intuitive, et j'ai rapidement
+      compris comment afficher des pages différentes en fonction de l'URL.
+    </p>
+    <p>
+      <strong>2. Utilisation des templates Jinja2 :</strong>
+      J'ai apprécié utiliser les templates pour séparer le code Python et le
+      HTML. Les balises {% raw %}{{ }}{% endraw %} et {% raw %}{% %}{% endraw %}
+      sont pratiques pour afficher des variables et faire des boucles ou des
+      conditions dans le HTML.
+    </p>
+    <p>
+      <strong>3. Environnements virtuels :</strong>
+      C'est le moment que j'ai préféré, le fait de créer un environnement m'a
+      permis de faire des commit clean, de ne pas partager quelque chose qui
+      pourrait rendre l'expérience utilisateur mauvaise. J'ai trouvé très utile
+      d'utiliser un environnement virtuel pour isoler les dépendances de mon
+      projet. Cela m'a permis d'éviter les conflits entre les versions des
+      bibliothèques.
+    </p>
+
+    <h3>Ce que j'ai appris</h3>
+    <p>
+      Ce projet m'a permis de mieux comprendre comment créer une application web
+      avec Flask. J'ai appris à structurer mon code, à gérer les entrées
+      utilisateur, et à utiliser Git pour versionner mon travail. J'ai aussi
+      découvert l'importance de bien gérer les erreurs et de tester son code
+      régulièrement.
+    </p>
+
+    <h3>Ce que j'ai utilisé</h3>
+    <p>
+      Pendant l'évaluation, j'avais le cours de Python à côté de moi, ainsi
+      qu'une formation que je suis en parallèle de l'IPI : Believemy. Cela m'a
+      permis non seulement de comprendre mes erreurs et d'appliquer les éléments
+      vus en cours, mais aussi de mettre en pratique ma formation Python.
+    </p>
+
+    <p>
+      Pour la suite, je voudrais approfondir mes connaissances en parsing et en
+      gestion des erreurs, et peut-être explorer d'autres bibliothèques Python.
+    </p>
+
+    <a href="{{ url_for('index') }}">Retour à l'accueil</a>
+  </body>
+</html>
