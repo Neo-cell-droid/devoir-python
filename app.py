@@ -1,5 +1,4 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
 app = Flask(__name__)  
 
 
@@ -23,6 +22,22 @@ def somme(a, b):
         texte = "nul"
     return render_template("somme.html", a=a, b=b, resultat=resultat, texte=texte)
 
+@app.route("/operation", methods=["GET", "POST"])
+def operation():
+    if request.method == "POST":
+        a = int(request.form["a"])
+        b = int(request.form["b"])
+        operation = request.form["operation"]
+        if operation == "+":
+            resultat = a + b
+        elif operation == "-":
+            resultat = a - b
+        elif operation == "*":
+            resultat = a * b
+        elif operation == "/":
+            resultat = a / b
+        return render_template("operation.html", resultat=resultat)
+    return render_template("operation.html")
 
 
 if __name__ == "__main__":
